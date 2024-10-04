@@ -1,0 +1,53 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Print to console": {
+		"scope": "cpp",
+		"prefix": "kmp",
+		"body": [
+			"vector<int> calc_lps(string &pat){",
+			"	int n = pat.size();",
+			"	vector<int> lps(n, 0);",
+			"	lps[0] = 0;",
+			"	int i = 1;",
+			"	int cnt = 0;",
+			"	while (i < n){",
+			"		if (pat[i] == pat[cnt])lps[i++]=++cnt;",
+			"		else{",
+			"			if (cnt)lps[i++]=0;",
+			"			else cnt=lps[cnt-1];",
+			"		}",
+			"	} ",
+			"	return lps;",
+			"}",
+			"vector<int> kmp(string &text, string &pat){",
+			"	vector<int> lps = calc_lps(pat);",
+			"	int i =0,cnt= 0;",
+			"	vector<int> ans(text.size() + 1, 0);",
+			"	while (i < text.size()){",
+			"		if (text[i] == pat[cnt]){",
+			"			i++;",
+			"			cnt++;",
+			"			if (cnt == pat.size()){",
+			"				ans[i - cnt + 1] = 1;",
+			"				cnt = lps[cnt - 1];",
+			"			}",
+			"		}else{",
+			"			if (cnt != 0){",
+			"			cnt = lps[cnt - 1];",
+			"			}else{",
+			"			i++;",
+			"			}",
+			"		}",
+			"	}",
+			"	return ans;",
+			"}",
+		],
+		"description": "Log output to console"
+	}
+}

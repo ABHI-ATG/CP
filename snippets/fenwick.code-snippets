@@ -1,0 +1,35 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Print to console": {
+		"scope": "cpp",
+		"prefix": "fenwick",
+		"body": [
+			"class ftree{",
+			"	vector<int> v;",
+			"   public:",
+			"	   ftree(int n){v.resize(n+2);}",
+			"	   void update(int ind, int val, int n){",
+			"		   while (ind <= n){",
+			"			   v[ind] += val;",
+			"			   ind = ind + (ind & -ind);",
+			"		   }",
+			"	   }",
+			"	   int getsum(int ind){",
+			"		   int sum = 0;",
+			"		   while (ind > 0){",
+			"			   sum += v[ind];",
+			"			   ind = ind - (ind & -ind);",
+			"		   }",
+			"		   return sum;",
+			"	   }",
+			"};",
+		],
+		"description": "Log output to console"
+	}
+}

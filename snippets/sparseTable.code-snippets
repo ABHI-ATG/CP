@@ -1,0 +1,43 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"Print to console": {
+		"scope": "cpp",
+		"prefix": "sparseTable",
+		"body": [
+			"const ll N = 300005;",
+			"const ll K = 20;",
+			"ll sp[N][K];",
+			"ll lg[N];",
+			"void solve(vector<ll> &v){",
+			"	ll n = v.size();",
+			"	for (ll i = 0; i < n; i++){",
+			"		sp[i][0] = v[i];",
+			"		for(int j=1;j<K;j++)sp[i][j]=0;",
+			"	}",
+			"	for (ll i = 2; i <= n; i++){",
+			"		lg[i] = lg[i / 2] + 1;",
+			"	}",
+			"	for (ll j = 1; j < K; j++){",
+			"		for (ll i = 0; i + (1 << (j - 1)) < n; i++){",
+			"			sp[i][j] = min(sp[i][j - 1], sp[i + (1 << (j - 1))][j - 1]);",
+			"		}",
+			"	}",
+			"}",
+			"ll query(ll l, ll r){",
+			"	if(l>r)return -mod;",
+			"	ll ret = 0;",
+			"	ll len = r - l + 1;",
+			"	ll segment = lg[len];",
+			"	ret = min(sp[l][segment], sp[r - (1 << segment) + 1][segment]);",
+			"	return ret;",
+			"}",
+		],
+		"description": "Log output to console"
+	}
+}
