@@ -1,0 +1,5 @@
+* find all different possible strings;
+    for a particular index of resulting string, place only unique character
+
+* two sets - find whether two sets is made such that absolute sum in minimal or equal
+    take or not_take (2^n)

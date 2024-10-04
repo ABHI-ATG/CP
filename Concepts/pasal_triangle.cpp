@@ -1,0 +1,1 @@
+// In pascal triangle, the number of odd numbers in a row is equal to the 2^(number of decimal representation of that number );

@@ -1,0 +1,1 @@
+rotate(arr,arr+(d%n),arr+n);

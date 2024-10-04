@@ -1,0 +1,19 @@
+// see the pattern
+// 000
+// 001
+// 010
+// 011
+// 100
+// 101
+// 110
+// 111
+// for ith bit, number of zeros is equal to number of ones for every 2^(i+1) multiple 
+
+// 
+// even^odd is 1;
+// when even=odd-1;
+// 
+
+
+// Property :
+// a+b=(a^b)+2*(a&b)

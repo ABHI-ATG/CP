@@ -1,0 +1,10 @@
+Dynamic Pricing Algorithm : 
+It is an algorithm which decides the prices of the services dynamically according to some of the factors like market condition, user behaviour, competitor price.
+Classifying the customer on recognising their behaviour and they can be classified into some categories - loyal cusomers, price-sensitive customer, high-value customer. Price adjustment can be done for each classified customers.
+Example : Price will be based on purchase history of customer, time spent on website, frequency of visits, etc
+
+Recommendation Algorithm :
+The algorithm recommends the relevant services to user in which user might interested in. 
+1. Collection the user data, service data and other relevant data. The data may include number of clicks on a service, number of times a page visited by user, number of times a service provider profile check by user, etc
+2. Content based filtering is recommendation system technique that suggest items to user based on featured and characteristics of items they have shown interest on
+3. API is created in Node.js and Express.js backend to handle user request for recommendation. This API takes the user-related data as input and provide recommendation services as output.

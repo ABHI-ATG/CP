@@ -1,0 +1,29 @@
+// mod
+//  difference of consecutive elements of array d1 d2 d3 ,,,, dn;
+// the gcd of(dx,,,dy) if greater than 1 it means number exist which can divide the array elements whose difference is (dx,,,,dy)
+// 
+
+
+// 
+// we can represent even number by 2 prime number except 2
+// an odd number can be represented by 1,2,3
+// 1:if the number is already prime
+// 2: if n-2 is prime then answer will be n-2 and 2
+// 3: otherwise 3 prime numbers will involved
+
+
+// 
+// to find how many numbers will give 2 after divide into x (lets say x =10) 
+// 10/2-(10/3);
+//  5 - 3 = 2 (5,4)
+// 
+
+
+// median
+// median is the middle element and it is the value, if we try to convert all elements to median element then total cost will be minimum;
+
+
+// divisor
+// a and b are two number
+// to find all divisor of a*b
+// multiply each divisor of x to each divisor of y

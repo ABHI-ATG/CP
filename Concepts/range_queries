@@ -1,0 +1,4 @@
+// lazy segment tree, 
+// save value as 0 except leaf node,
+// now for the update in range [l,r], update in fully overlap nodes
+// during getvalue, pass the value of node to its child

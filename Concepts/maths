@@ -1,0 +1,16 @@
+// Binary Exponentiation
+
+// Divisors
+
+
+// for the even and odd,
+// when you need to find the same number or say even number of occurences, use xor concept instead of storing frequency
+// that will find the number of occurences as odd or even
+
+
+// if the mod is given in the problem 
+// then inverse may or may not exist if gcd of number and mod is not 1 then you have to find a different approach where inverse is not needed.
+//
+
+
+// matrix multiplication : fibonacci number

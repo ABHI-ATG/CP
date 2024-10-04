@@ -1,0 +1,22 @@
+// min
+// min({a,b,c});
+
+//structure binding 
+// pair<int,int> p={1,2};
+// auto [a,b]=p;
+
+
+// string 
+// string(n,s[0])==s
+
+
+// indexing operator
+// ' \n'[i==n-1]
+// if i==n-1 then index will be 1 and at index 1 character will be selected otherwise 0;
+
+
+// lower_bound(v.begin(),v.end(),val)-v.begin();
+// gives you and index which is just equal or greater than val;
+
+//
+// (a*=100)%=mod;
